@@ -2,13 +2,15 @@
 #include <numeric>
 #include <vector>
 
-int array_challenge(std::vector<int>& arr) {
+int array_challenge(std::vector<int>& arr) 
+{
     int sum = std::accumulate(arr.begin(), arr.end(), 0);
 
     int fibonacci1 = 0, fibonacci2 = 1;
     int fibonacci_sum = 0;
 
-    while (fibonacci_sum < sum) {
+    while (fibonacci_sum < sum) 
+    {
         fibonacci_sum = fibonacci1 + fibonacci2;
         fibonacci1 = fibonacci2;
         fibonacci2 = fibonacci_sum;
@@ -18,7 +20,8 @@ int array_challenge(std::vector<int>& arr) {
     return arr[0];
 }
 
-int main() {
+int main() 
+{
     // Test the function with the example input
     std::vector<int> arr = {15, 1, 3};
     int output = array_challenge(arr);
